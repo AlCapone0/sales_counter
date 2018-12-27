@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block html_title %}
+    Компания
+{% endblock %}
+
+
+{% block application %}
+{% for company in companies %}
+    <div>
+        <h2><a href="{% url 'company' company_id=company.id %}">{{ company.CompanyName }}</a></h2>
+        <div>{{ company.AddressCompany }}</div>
+        <div></div>
+    </div>
+
+{% endfor %}
+{% endblock %}
+
