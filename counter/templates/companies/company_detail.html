@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block html_title %}
+    Компания {{ company.CompanyName }}
+{% endblock %}
+
+
+{% block application %}
+
+    <div>
+        <h2>{{ company.CompanyName }}</h2>
+        <div>{{ company.AddressCompany }}</div>
+        <div></div>
+    </div>
+
+
+{% endblock %}
