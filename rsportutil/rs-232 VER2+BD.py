@@ -43,4 +43,4 @@ def read_com(port_num):
 
 while True:
     #read_com(3)
-    read_com(14)
+    read_com(4)
