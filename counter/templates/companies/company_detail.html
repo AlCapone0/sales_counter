@@ -8,14 +8,39 @@
 {% block application %}
 
     <div>
+
         <h2>{{ company.CompanyName }}</h2>
         <div>{{ company.AddressCompany }}</div>
-        <div>-------------------------------------------</div>
-        <div>{{ comport }}</div>
-        <div>{{ comport.id }}</div>
-        <div>{{ comport.PortID }}</div>
-        <div></div>
+        <div>-----------------------------------------------------------</div>
+
     </div>
+
+    <a href=" {#% url 'company_detail' pk=1 %#} "><button>День</button></a>
+    <a href="  "><button>Неделя</button></a>
+    <a href=" "><button>Месяц</button></a>
+    <a href="  "><button>Все</button></a>
+
+    <div>-----------------------------------------------------------</div>
+<table border="1">
+  <tr>
+    <td>id</td>
+    <td>PortID</td>
+    <td>DataCreated</td>
+    <td>ProxyKey</td>
+  </tr>
+
+    {% for id in comport %}
+
+    <tr>
+        <td>{{ id.id }}</td>
+        <td>{{ id.PortID }}</td>
+        <td>{{ id.DataCreated }}</td>
+        <td>{{ id.ProxyKey }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
 
 
 {% endblock %}
